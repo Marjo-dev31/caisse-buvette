@@ -1,0 +1,104 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0"
+      />
+      <title>Calculatrice buvette</title>
+      <link rel="stylesheet" href="styles.css" />
+   </head>
+   <body>
+      <div class="total">
+         <p>Total =</p>
+         <p id="totalValue">0</p>
+         <button onclick="reset()">Reset</button>
+      </div>
+      <div>
+         <ul>
+            <li>
+               <button  class="addBtn" onclick="add2(1, 'ecocup')"><img class="items" src="assets/ecocup.webp" alt=""><span class="quantity">0</span></button
+               ><img onclick="remove(1, 'ecocup')" class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1, 'cafe')"><img class="items" src="assets/cafe.webp" alt="café"><span class="quantity">0</span></button>
+              <img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2, 'boisson')"><img class="items" src="assets/boisson.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2, 'chocolat chaud')"><img class="items" src="assets/chocolat chaud.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1.5, 'eau')"><img class="items" src="assets/eau.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2.5, 'bière')"><img class="items" src="assets/biere.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2, 'crepe au sucre')"><img class="items" src="assets/crepe.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2, 'crepe nutella')"><img class="items" src="assets/crepe-nutella.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1.5, 'chocolatine')"><img class="items" src="assets/chocolatine.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1, 'sucette')"><img class="items" src="assets/sucette.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1, 'bonbon')"><img class="items" src="assets/bonbon.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(1.5, 'kinder bueno')"><img class="items" src="assets/kinder bueno.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2.5, 'croque monsieur')"><img class="items" src="assets/croque monsieur.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2.5, 'frite')"><img class="items" src="assets/frite.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(4, 'sandwich')"><img class="items" src="assets/images (1).jpeg" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(3, 'hotdog')"><img class="items" src="assets/Hot_dog_with_mustard.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(5.5, 'americain')"><img class="items" src="assets/sandwich-americain.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(5.5, 'rieumois')"><img class="items" src="assets/rieumois.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2, 'croque nutella')"><img class="items" src="assets/croque nutella.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+            <li>
+               <button class="addBtn" onclick="add2(2.5, 'sandwich jambon')"><img class="items" src="assets/jambon beurre.webp" alt=""><span>0</span></button
+               ><img class="moins" src="assets/moins.png" alt="">
+            </li>
+         </ul>
+      </div>
+
+      <script src="app.js"></script>
+   </body>
+</html>
