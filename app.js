@@ -2,6 +2,8 @@ const totalValueElement = document.getElementById("totalValue");
 totalValueElement.value = 0;
 const liElement = document.querySelectorAll("li");
 const spanElementQuery = document.querySelectorAll("span");
+const removeBtnElement = document.getElementsByClassName("moins");
+
 const quantityArray = [
    { name: "ecocup", quantity: 0 },
    { name: "cafe", quantity: 0 },
@@ -25,12 +27,18 @@ const quantityArray = [
    { name: "sandwich jambon", quantity: 0 },
 ];
 
+
+
 function add2(price, label) {
    const result = (totalValueElement.value += price);
    totalValueElement.innerHTML = result;
    const element = quantityArray.findIndex((e) => e.name === label);
    const quantity = (quantityArray[element].quantity += 1);
    spanElementQuery[element].innerHTML = quantity;
+   console.log(removeBtnElement[element])
+   if (quantity >= 1) {
+      removeBtnElement[element].classList.remove('disabled')
+   }
 }
 
 function reset() {
@@ -46,4 +54,7 @@ function remove(price, label) {
    const element = quantityArray.findIndex((e) => e.name === label);
    const quantity = (quantityArray[element].quantity -= 1);
    spanElementQuery[element].innerHTML = quantity;
+   if (quantity === 0) {
+      removeBtnElement[element].classList.add('disabled')
+   }
 }

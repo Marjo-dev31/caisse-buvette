@@ -77,9 +77,13 @@ span {
     height: 40px;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -5%;
     background-color: aliceblue;
     border-radius: 50%;
+}
+
+.disabled {
+    display: none;
 }
 
 /* .removeBtn {
@@ -91,3 +95,16 @@ span {
     width: 40px;
     height: 40px;
 } */
+
+.price {
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    background-color: rgb(49, 47, 47);
+    width: 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    color: white;
+}
