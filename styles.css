@@ -108,3 +108,18 @@ span {
     border-bottom-left-radius: 50%;
     color: white;
 }
+
+#reset {
+    display: flex;
+    justify-content: center;
+}
+
+#reset button {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+}
+
+#form {
+    margin: 0;
+}
