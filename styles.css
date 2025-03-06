@@ -123,3 +123,11 @@ span {
 #form {
     margin: 0;
 }
+
+.stand {
+    font-size: 1.5rem;
+    border: .25rem solid rgb(249, 207, 0);
+    width: 10rem;
+    height: 10rem;
+    padding: 0;
+}

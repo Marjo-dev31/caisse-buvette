@@ -346,9 +346,24 @@
                />
                <p class="price">2€50</p>
             </li>
+            <li><button class="addBtn stand "
+               onclick="add2(3, 'porte-clé')">Porte-clé<span>0</span></button><img
+               onclick="remove(4, 'porte-clé')"
+               class="moins disabled"
+               src="assets/moins.png"
+               alt=""
+            />
+            <p class="price">3€</p></li><li><button class="addBtn stand"
+               onclick="add2(4, 'stickers')">Stickers<span>0</span></button><img
+               onclick="remove(4, 'stickers')"
+               class="moins disabled"
+               src="assets/moins.png"
+               alt=""
+            />
+            <p class="price">4€</p></li>
          </ul>
       </div>
-      <div id="reset"><button  onclick="reset()">Reset</button></div>
+      <div id="reset"><button onclick="reset()">Reset</button></div>
       <script src="app.js"></script>
    </body>
 </html>

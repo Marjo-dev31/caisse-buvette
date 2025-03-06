@@ -25,6 +25,8 @@ const quantityArray = [
    { name: "rieumois", quantity: 0 },
    { name: "croque nutella", quantity: 0 },
    { name: "sandwich jambon", quantity: 0 },
+   { name: "porte-clé", quantity: 0 },
+   { name: "stickers", quantity: 0 },
 ];
 
 function add2(price, label) {
