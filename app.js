@@ -62,6 +62,24 @@ function remove(price, label) {
    }
 }
 
+async function updateItem() {
+   console.log('toto')
+   const header = new Headers();
+   header.append("Content-type", "application/json");
+   const init = {
+      method: "PATCH",
+      headers: header,
+      body: JSON.stringify(quantityArray),
+   };
+   await fetch("http://localhost:8000/", init)
+      .then((response) => {
+         response.json();
+      })
+      .catch((error) => {
+         console.log(error);
+      });
+}
+
 async function submitForm() {
    const header = new Headers();
    header.append("Content-type", "application/json");
@@ -73,10 +91,14 @@ async function submitForm() {
    await fetch("http://localhost:8000/", init)
       .then((response) => {
          response.json();
-         reset();
+         updateItem();
+         reset()
       })
       .catch((error) => {
          console.log(error);
       });
+   
 }
+
+
 

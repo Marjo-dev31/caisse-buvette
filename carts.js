@@ -12,9 +12,7 @@ async function getItems() {
            { const liElement = document.createElement("li")
             const {name,quantity } = e
             liElement.append(name, ":", quantity)
-        cartsElement.append(liElement)})
-        console.log(cartArray, 'toto')
-        
+        cartsElement.append(liElement)})        
         })}
       )}
 
