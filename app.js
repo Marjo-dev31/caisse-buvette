@@ -78,5 +78,5 @@ async function submitForm() {
       .catch((error) => {
          console.log(error);
       });
-   //
 }
+
