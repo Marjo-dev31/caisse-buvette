@@ -71,7 +71,7 @@ async function updateItem() {
       headers: header,
       body: JSON.stringify(quantityArray),
    };
-   await fetch("http://localhost:8000/", init)
+   await fetch("https://k3yazg4mb0.execute-api.eu-west-3.amazonaws.com/", init)
       .then((response) => {
          response;
          console.log(response)
@@ -89,7 +89,7 @@ async function submitForm() {
       headers: header,
       body: JSON.stringify(quantityArray),
    };
-   await fetch("http://localhost:8000/", init)
+   await fetch("https://k3yazg4mb0.execute-api.eu-west-3.amazonaws.com/", init)
       .then((response) => {
          response;
          updateItem();
