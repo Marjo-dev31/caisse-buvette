@@ -2,12 +2,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Total des ventes</title>
+    <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
-    <button onclick="getItems()">getItems</button>
+    <button onclick="getItems()" class="getItemsBtn">Obtenir total des ventes</button>
     <h1>Quantités vendues :</h1>
-    <div ><ul id="carts"></ul></div>
+    <div class="totalQuantity" ><ul id="carts"></ul></div>
+    <div><a class="links" href="/index.html">Return</a></div>
     <script src="/carts.js"></script>
 </body>
 </html>
