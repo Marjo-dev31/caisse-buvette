@@ -63,7 +63,7 @@ function remove(price, label) {
 }
 
 async function updateItem() {
-   console.log('toto')
+   
    const header = new Headers();
    header.append("Content-type", "application/json");
    const init = {
@@ -73,7 +73,8 @@ async function updateItem() {
    };
    await fetch("http://localhost:8000/", init)
       .then((response) => {
-         response.json();
+         response;
+         console.log(response)
       })
       .catch((error) => {
          console.log(error);
@@ -90,7 +91,7 @@ async function submitForm() {
    };
    await fetch("http://localhost:8000/", init)
       .then((response) => {
-         response.json();
+         response;
          updateItem();
          reset()
       })
