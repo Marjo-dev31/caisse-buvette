@@ -25,9 +25,9 @@ const quantityArray = [
    { name: "rieumois", quantity: 0 },
    { name: "croque nutella", quantity: 0 },
    { name: "sandwich jambon", quantity: 0 },
+   { name: "porte-clé", quantity: 0 },
+   { name: "stickers", quantity: 0 },
 ];
-
-
 
 function add2(price, label) {
    const result = (totalValueElement.value += price);
@@ -35,17 +35,20 @@ function add2(price, label) {
    const element = quantityArray.findIndex((e) => e.name === label);
    const quantity = (quantityArray[element].quantity += 1);
    spanElementQuery[element].innerHTML = quantity;
-   console.log(removeBtnElement[element])
+
    if (quantity >= 1) {
-      removeBtnElement[element].classList.remove('disabled')
+      removeBtnElement[element].classList.remove("disabled");
    }
 }
 
 function reset() {
    totalValueElement.value = 0;
    totalValueElement.innerHTML = totalValueElement.value;
-   spanElementQuery.forEach((e)=>e.innerHTML=0)
-   quantityArray.forEach((e) => e.quantity =0);
+   spanElementQuery.forEach((e) => (e.innerHTML = 0));
+   quantityArray.forEach((e) => (e.quantity = 0));
+   Array.from(removeBtnElement).forEach((e) =>
+      e.classList.add("disabled")
+   );
 }
 
 function remove(price, label) {
@@ -55,6 +58,48 @@ function remove(price, label) {
    const quantity = (quantityArray[element].quantity -= 1);
    spanElementQuery[element].innerHTML = quantity;
    if (quantity === 0) {
-      removeBtnElement[element].classList.add('disabled')
+      removeBtnElement[element].classList.add("disabled");
    }
 }
+
+async function updateItem() {
+   
+   const header = new Headers();
+   header.append("Content-type", "application/json");
+   const init = {
+      method: "PATCH",
+      headers: header,
+      body: JSON.stringify(quantityArray),
+   };
+   await fetch("http://localhost:8000/", init)
+      .then((response) => {
+         response;
+         console.log(response)
+      })
+      .catch((error) => {
+         console.log(error);
+      });
+}
+
+async function submitForm() {
+   const header = new Headers();
+   header.append("Content-type", "application/json");
+   const init = {
+      method: "POST",
+      headers: header,
+      body: JSON.stringify(quantityArray),
+   };
+   await fetch("http://localhost:8000/", init)
+      .then((response) => {
+         response;
+         updateItem();
+         reset()
+      })
+      .catch((error) => {
+         console.log(error);
+      });
+   
+}
+
+
+
