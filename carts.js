@@ -1,7 +1,9 @@
 const cartsElement = document.getElementById("carts");
 
 async function getItems() {
-   await fetch("https://k3yazg4mb0.execute-api.eu-west-3.amazonaws.com/items")
+   await fetch(
+      "https://k3yazg4mb0.execute-api.eu-west-3.amazonaws.com/items"
+   )
       .then((response) => {
          return response.json();
       })
@@ -16,3 +18,5 @@ async function getItems() {
          });
       });
 }
+
+getItems();
