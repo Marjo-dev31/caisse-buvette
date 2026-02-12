@@ -12,9 +12,9 @@
       <div class="total">
          <p>Total =</p>
          <p id="totalValue">0</p>
-         <button onclick="submitForm()" type="button" value="valider">
+         <!-- <button onclick="submitForm()" type="button" value="valider">
             Valider
-         </button>
+         </button> -->
       </div>
       <div>
          <ul class="itemsList">
@@ -83,19 +83,19 @@
                <p class="price">2€</p>
             </li>
             <li>
-               <button class="addBtn" onclick="add2(1, 'eau')">
+               <button class="addBtn" onclick="add2(1.50, 'eau')">
                   <img
                      class="items"
                      src="assets/eau.webp"
                      alt=""
                   /><span>0</span></button
                ><img
-                  onclick="remove(1, 'eau')"
+                  onclick="remove(1.50, 'eau')"
                   class="moins disabled"
                   src="assets/moins.png"
                   alt=""
                />
-               <p class="price">1€</p>
+               <p class="price">1€50</p>
             </li>
             <li>
                <button class="addBtn" onclick="add2(2.5, 'bière')">
@@ -115,7 +115,7 @@
             <li>
                <button
                   class="addBtn"
-                  onclick="add2(2, 'crepe au sucre')"
+                  onclick="add2(1, 'crepe au sucre')"
                >
                   <img
                      class="items"
@@ -123,17 +123,17 @@
                      alt=""
                   /><span>0</span></button
                ><img
-                  onclick="remove(2, 'crepe au sucre')"
+                  onclick="remove(1, 'crepe au sucre')"
                   class="moins disabled"
                   src="assets/moins.png"
                   alt=""
                />
-               <p class="price">2€</p>
+               <p class="price">1€</p>
             </li>
             <li>
                <button
                   class="addBtn"
-                  onclick="add2(2, 'crepe nutella')"
+                  onclick="add2(1.5, 'crepe nutella')"
                >
                   <img
                      class="items"
@@ -141,12 +141,12 @@
                      alt=""
                   /><span>0</span></button
                ><img
-                  onclick="remove(2, 'crepe nutella')"
+                  onclick="remove(1.5, 'crepe nutella')"
                   class="moins disabled"
                   src="assets/moins.png"
                   alt=""
                />
-               <p class="price">2€</p>
+               <p class="price">1€50</p>
             </li>
             <li>
                <button
@@ -171,7 +171,7 @@
                   <img
                      class="items"
                      src="assets/sucette.webp"
-                     alt=""
+                     alt="sucette"
                   /><span>0</span></button
                ><img
                   onclick="remove(1, 'sucette')"
@@ -181,7 +181,7 @@
                />
                <p class="price">1€</p>
             </li>
-            <li>
+            <!-- <li>
                <button class="addBtn" onclick="add2(1, 'bonbon')">
                   <img
                      class="items"
@@ -195,7 +195,7 @@
                   alt=""
                />
                <p class="price">1€</p>
-            </li>
+            </li> -->
             <li>
                <button
                   class="addBtn"
@@ -262,7 +262,7 @@
                />
                <p class="price">4€</p>
             </li>
-            <li>
+            <!-- <li>
                <button class="addBtn" onclick="add2(3, 'hotdog')">
                   <img
                      class="items"
@@ -276,7 +276,7 @@
                   alt=""
                />
                <p class="price">3€</p>
-            </li>
+            </li> -->
             <li>
                <button
                   class="addBtn"
@@ -349,6 +349,20 @@
             <li>
                <button
                   class="addBtn stand"
+                  onclick="add2(0.5, 'madeleine')"
+               >
+                  Madeleine &#128540;<span>0</span></button
+               ><img
+                  onclick="remove(0.5, 'madeleine')"
+                  class="moins disabled"
+                  src="assets/moins.png"
+                  alt=""
+               />
+               <p class="price">50cts</p>
+            </li>
+            <li>
+               <button
+                  class="addBtn stand"
                   onclick="add2(3, 'porte-clé')"
                >
                   Porte-clé<span>0</span></button
@@ -363,21 +377,23 @@
             <li>
                <button
                   class="addBtn stand"
-                  onclick="add2(4, 'stickers')"
+                  onclick="add2(3, 'stickers')"
                >
                   Stickers<span>0</span></button
                ><img
-                  onclick="remove(4, 'stickers')"
+                  onclick="remove(3, 'stickers')"
                   class="moins disabled"
                   src="assets/moins.png"
                   alt=""
                />
-               <p class="price">4€</p>
+               <p class="price">3€</p>
             </li>
          </ul>
       </div>
       <div id="reset"><button onclick="reset()">Reset</button></div>
-      <div ><a class="links" href="/carts.html">Total des ventes</a></div>
+      <!-- <div>
+         <a class="links" href="/carts.html">Total des ventes</a>
+      </div> -->
       <script src="app.js"></script>
    </body>
 </html>
